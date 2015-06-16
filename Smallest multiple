@@ -1,0 +1,31 @@
+public class SmallestMultiple {
+
+    public long getSmallestMultiple(int upperBound) {
+
+        int result = upperBound;
+
+        for (int i = 1; i <= upperBound; i++) {
+
+            while (result % i != 0)
+
+            {
+
+                result++;
+                i--;
+
+            }
+
+        }
+
+        return result;
+
+    }
+
+    public static void main(String[] args) {
+
+        SmallestMultiple test = new SmallestMultiple();
+        System.out.println(test.getSmallestMultiple(5));
+
+    }
+
+}
