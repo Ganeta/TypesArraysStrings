@@ -1,0 +1,34 @@
+public class OddOccurence {
+
+    public boolean isOdd(int n) {
+
+        return n % 2 != 0;
+    }
+
+    public int getOddOccurrence(int[] array) {
+
+        int rez = 0;
+
+        int current = 0;
+
+        for (int i = 0; i < array.length; i++)
+
+        {
+            current = array[i];
+            rez = rez ^ current;
+        }
+
+        return (int) rez;
+
+    }
+
+    public static void main(String[] args) {
+
+        OddOccurence test = new OddOccurence();
+
+        int[] arrayTest = { 1, 2, 2, 4, 3, 4, 3, 1, 4, 6, 5, 6, 5 };
+        System.out.println(test.getOddOccurrence(arrayTest));
+
+    }
+
+}
