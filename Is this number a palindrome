@@ -1,0 +1,30 @@
+public class NumberPalindrom {
+
+    public boolean isPalindrome(int argument) {
+
+        int reverse = 0;
+        int n = argument;
+
+        while (n != 0) {
+            int remainder = n % 10;
+            reverse = reverse * 10 + remainder;
+            n = n / 10;
+        }
+
+        if (argument == reverse) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        NumberPalindrom test = new NumberPalindrom();
+
+        int k = 123512321;
+        int t = 121;
+        System.out.println(test.isPalindrome(k));
+        System.out.println(test.isPalindrome(t));
+
+    }
+
+}
