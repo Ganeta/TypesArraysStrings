@@ -1,0 +1,29 @@
+public class MinArray {
+
+    public int min(int[] array) {
+
+        int minEl = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+
+            if (minEl > array[i]) {
+
+                minEl = array[i];
+
+            }
+
+        }
+
+        return minEl;
+
+    }
+
+    public static void main(String[] args) {
+
+        MinArray test = new MinArray();
+        int arrayTest[] = { 10, 5, 30, 40 };
+        System.out.println(test.min(arrayTest));
+
+    }
+
+}
