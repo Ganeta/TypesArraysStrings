@@ -1,0 +1,38 @@
+public class PowInteger {
+
+    public long pow(int a, int b) {
+
+        int rezultat = 1;
+
+        for (int i = 1; i <= b; i++) {
+
+            rezultat = rezultat * a;
+
+        }
+
+        return rezultat;
+    }
+
+    public long pow2(int a, int b) {
+
+        int rezultat = 1;
+
+        for (int i = 1; i <= b / 2; i++) {
+
+            rezultat = rezultat * a * a;
+
+        }
+
+        return rezultat;
+    }
+
+    public static void main(String[] args) {
+
+        PowInteger test = new PowInteger();
+        System.out.println(test.pow(3, 4));
+
+        System.out.println(test.pow2(3, 4));
+
+    }
+
+}
