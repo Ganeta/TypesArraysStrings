@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class MaximalScalarProduct {
+
+    public long maximalScalarSum(int[] a, int[] b) {
+
+        long product = 0;
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        for (int i = 0; i < a.length; i++) {
+
+            product += a[i] * b[i];
+
+        }
+
+        return product;
+    }
+
+    public static void main(String[] args) {
+
+        MaximalScalarProduct test = new MaximalScalarProduct();
+        int[] first = { 10, 5, 15 };
+        int[] second = { 1, 2, 3 };
+        System.out.println(test.maximalScalarSum(first, second));
+
+    }
+
+}
