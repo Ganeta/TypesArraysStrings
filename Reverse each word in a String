@@ -1,0 +1,30 @@
+public class ReverseEachWord {
+
+    public String reverseEveryChar(String arg) {
+
+        String[] currentString;
+        currentString = arg.split(" ");
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < currentString.length; i++) {
+            for (int j = currentString[i].length() - 1; j >= 0; j--) {
+
+                result.append(currentString[i].charAt(j));
+
+            }
+            result.append(" ");
+        }
+        return result.toString();
+
+    }
+
+    public static void main(String[] args) {
+
+        ReverseEachWord test = new ReverseEachWord();
+        String argTest = "ganeta dobreva";
+        System.out.println(test.reverseEveryChar(argTest));
+
+    }
+
+}
