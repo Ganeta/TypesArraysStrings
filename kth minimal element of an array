@@ -1,0 +1,21 @@
+import java.util.Arrays;
+
+public class KthMinElementArray {
+
+    public int kthMin(int k, int[] array) {
+
+        Arrays.sort(array);
+
+        return array[k - 1];
+
+    }
+
+    public static void main(String[] args) {
+
+        int[] array1 = { 11, 2, 3, 4 };
+        KthMinElementArray test = new KthMinElementArray();
+        System.out.println(test.kthMin(2, array1));
+
+    }
+
+}
