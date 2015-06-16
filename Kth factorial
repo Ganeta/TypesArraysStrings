@@ -1,0 +1,23 @@
+public class KthFact {
+
+    public long kthFac(int k, int n) {
+
+        int product = 1;
+
+        for (int i = 1; i <= n; i += k) {
+
+            product *= i;
+
+        }
+
+        return product;
+
+    }
+
+    public static void main(String[] args) {
+
+        KthFact test = new KthFact();
+        System.out.println(test.kthFac(2, 7));
+    }
+
+}
