@@ -1,0 +1,74 @@
+public class CanBalance {
+
+    public boolean canBalance(int[] numbers) {
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+
+            sum += numbers[i];
+        }
+
+        if (sum % 2 == 0)
+            return true;
+
+        else
+
+            return false;
+
+    }
+    
+    public boolean canBalance2(int [] numbers){
+        int leftSum = 0;
+        int rightSum = 0;
+        
+        for (int i = 0; i < numbers.length; i++) {
+
+            rightSum += numbers[i];
+        }
+        
+        
+       
+        for(int j = numbers.length-1; j>=0; j--){
+            
+            leftSum = leftSum + j;
+            
+           if(leftSum < rightSum){
+               
+               rightSum = rightSum - leftSum;
+               
+           }
+           
+           if(leftSum == rightSum){
+               
+               return true;
+              
+           }
+           
+       
+            
+        }
+        return false;
+        
+        
+        
+    }
+
+    public static void main(String[] args) {
+
+        CanBalance test = new CanBalance();
+        int[] numbersTest = { 1, 1, 1, 2, 1 };
+        int[] numberTest2 = { 2, 1, 1, 2, 1 };
+        int[] numberTest3 = { 10, 10 };
+
+        System.out.println(test.canBalance(numbersTest));
+        System.out.println(test.canBalance(numberTest2));
+        System.out.println(test.canBalance(numberTest3));
+        
+        System.out.println(test.canBalance2(numbersTest));
+        System.out.println(test.canBalance2(numberTest2));
+        System.out.println(test.canBalance2(numberTest3));
+        
+        
+
+    }
+
+}
