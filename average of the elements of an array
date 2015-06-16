@@ -1,0 +1,25 @@
+public class AverageElementsArray {
+
+    public int getAverage(int[] array) {
+
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+
+            sum += array[i];
+
+        }
+
+        average = (sum / array.length);
+        return average;
+    }
+
+    public static void main(String[] args) {
+
+        int arrayTest[] = { 1, 2, 3 };
+        AverageElementsArray test = new AverageElementsArray();
+        System.out.println(test.getAverage(arrayTest));
+
+    }
+
+}
