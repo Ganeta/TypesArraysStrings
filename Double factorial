@@ -1,0 +1,23 @@
+ublic class DoubleFact {
+
+    public long Fact(long firstFac) {
+
+        int product = 1;
+
+        for (int i = 1; i <= firstFac; i++) {
+
+            product *= i;
+
+        }
+
+        return (long) product;
+
+    }
+
+    public long DoubleFac(int n) {
+
+        long FirstFac = Fact(n);
+
+        return (Fact(FirstFac));
+
+    }
