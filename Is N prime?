@@ -1,0 +1,29 @@
+public class PrimeN {
+
+    public boolean isPrime(int N) {
+
+        int divider = 2;
+        int maxDivider = (int) Math.sqrt(N);
+        boolean prime = true;
+        while (prime && (divider <= maxDivider)) {
+            if (N % divider == 0) {
+                prime = false;
+            }
+
+            divider++;
+        }
+
+        if (prime == true) {
+            return true;
+        } else
+            return false;
+    }
+
+    public static void main(String[] args) {
+
+        PrimeN test = new PrimeN();
+        System.out.println(test.isPrime(17));
+        
+
+    }
+}
